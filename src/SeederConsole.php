@@ -22,7 +22,7 @@ class SeederConsole extends Command
         $this->addArgument('connection', InputArgument::OPTIONAL);
         $this->addArgument('tables', InputArgument::OPTIONAL);
         $this->addOption('excepts', 'e', InputOption::VALUE_OPTIONAL);
-        $this->addOption('force', 'f', InputOption::VALUE_OPTIONAL);
+        $this->addOption('force', 'f', InputOption::VALUE_NONE);
     }
 
     public function execute(InputInterface $input, OutputInterface $output)

@@ -19,8 +19,10 @@ class SeederServiceProvider implements ServiceProviderInterface
      */
     public function register(Container $container)
     {
-        $consoles = config()->get('consoles', []);
-        $consoles[] = SeederConsole::class;
-        config()->set('consoles', $consoles);
+        if ('prod' !== config()->get('environment')) {
+            $consoles = config()->get('consoles', []);
+            $consoles[] = SeederConsole::class;
+            config()->set('consoles', $consoles);
+        }
     }
 }
