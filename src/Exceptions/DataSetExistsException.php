@@ -11,5 +11,4 @@ use RuntimeException;
 
 class DataSetExistsException extends RuntimeException
 {
-
 }

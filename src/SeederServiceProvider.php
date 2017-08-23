@@ -12,9 +12,9 @@ use FastD\Container\ServiceProviderInterface;
 
 class SeederServiceProvider implements ServiceProviderInterface
 {
-
     /**
      * @param Container $container
+     *
      * @return mixed
      */
     public function register(Container $container)

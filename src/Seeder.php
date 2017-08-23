@@ -8,13 +8,12 @@
 namespace Runner\FastdSeeder;
 
 use FastD\Model\Database;
-use Runner\FastdSeeder\Exceptions\ConnectionNotFoundException;
 use PDO;
+use Runner\FastdSeeder\Exceptions\ConnectionNotFoundException;
 use Symfony\Component\Yaml\Yaml;
 
 class Seeder
 {
-
     /**
      * @var Database
      */

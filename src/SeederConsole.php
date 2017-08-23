@@ -15,7 +15,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class SeederConsole extends Command
 {
-
     public function configure()
     {
         $this->setName('seed:dataset');
@@ -41,6 +40,7 @@ class SeederConsole extends Command
 
         if (0 === count($tables)) {
             $output->writeln('<error>no table to run</error>');
+
             return 1;
         }
 
@@ -48,7 +48,7 @@ class SeederConsole extends Command
 
         $output->writeln('');
 
-        $force = (bool)$input->getOption('force');
+        $force = (bool) $input->getOption('force');
 
         $seeder->mkdirIfNotExists();
 
@@ -56,17 +56,15 @@ class SeederConsole extends Command
             $output->writeln("running table: {$table}");
 
             if (!$force && $seeder->datasetExists($table)) {
-                $output->writeln("               <error>data set exists</error>");
+                $output->writeln('               <error>data set exists</error>');
                 continue;
             }
 
-            $count = $seeder->generateDataSet($table, (bool)$input->getOption('force'));
+            $count = $seeder->generateDataSet($table, (bool) $input->getOption('force'));
 
             $output->writeln("               <info>{$count} records</info>");
         }
 
         return 0;
     }
-
-
 }
