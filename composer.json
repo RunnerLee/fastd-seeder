@@ -2,7 +2,7 @@
     "name": "runner/fastd-seeder",
     "description": "seeder for fastd framework",
     "type": "library",
-    "license": "MIT",
+    "license": "GPL-3.0",
     "authors": [
         {
             "name": "RunnerLee",
