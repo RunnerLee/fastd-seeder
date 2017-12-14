@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "fastd/fastd": "~3.1.0"
+        "fastd/fastd": "3.2.x-dev"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.1"
